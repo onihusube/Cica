@@ -15,7 +15,7 @@ DESCENT = 204
 SOURCE = os.getenv('CICA_SOURCE_FONTS_PATH', './sourceFonts')
 LICENSE = open('./LICENSE.txt').read()
 COPYRIGHT = open('./COPYRIGHT.txt').read()
-VERSION = '5.0.2'
+VERSION = '5.0.3'
 FAMILY = 'Cica'
 
 fonts = [
