@@ -759,7 +759,7 @@ def build_font(_f, emoji):
 def add_notoemoji(_f):
     notoemoji = fontforge.open(os.path.join(SOURCE, 'NotoEmoji-Regular.ttf'))
     for g in notoemoji.glyphs():
-        if g.isWorthOutputting and g.encoding > 0x04f9:
+        if g.encoding > 0x04f9:
             g.transform((0.42,0,0,0.42,0,0))
             g = align_to_center(g)
             notoemoji.selection.select(g.encoding)
