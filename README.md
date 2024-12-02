@@ -10,7 +10,6 @@
 | [![Julia on Jupyter](screenshots/julia.png)](screenshots/julia.png) | [![GVim on Windows](screenshots/gvim.png)](screenshots/gvim.png)       |
 
 
-
 ## 特徴
 
 * 以下のフォントを合成後に調整した、プログラミング向けの等幅日本語フォントです
