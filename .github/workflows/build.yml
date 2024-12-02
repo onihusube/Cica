@@ -17,7 +17,7 @@ jobs:
 
       # Upload built results as an artifact
       - name: Upload artifacts
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v4
         with:
           name: Cica-nightly-${{ github.sha }}
           path: dist
