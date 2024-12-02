@@ -4,7 +4,7 @@ ENV HACK_VERSION v3.003
 ENV HACK_ARCHIVE_HASH 0c2604631b1f055041c68a0e09ae4801acab6c5072ba2db6a822f53c3f8290ac
 ENV MGENPLUS_GDRIVE_ID 1NWZvbjzMDIJyzwpTULi4Lk7uzayU7F7j
 ENV MGENPLUS_ARCHIVE_HASH ecea6764973d93936238f1c06ed246310bec320f63f350c2bdb7e8d1feee25cc
-ENV NOTO_EMOJI_VERSION v2.034
+ENV NOTO_EMOJI_VERSION v2.047
 ENV NOTO_EMOJI_FILE_HASH 415dc6290378574135b64c808dc640c1df7531973290c4970c51fdeb849cb0c5
 ENV DEJAVU_VERSION 2.37
 ENV DEJAVU_ARCHIVE_HASH 7576310b219e04159d35ff61dd4a4ec4cdba4f35c00e002a136f00e96a908b0a
@@ -27,8 +27,7 @@ RUN curl --fail -L https://github.com/source-foundry/Hack/releases/download/$HAC
     unar /tmp/rounded-mgenplus.7z -o /tmp && \
     cp /tmp/rounded-mgenplus/rounded-mgenplus-1m-regular.ttf sourceFonts/ && \
     cp /tmp/rounded-mgenplus/rounded-mgenplus-1m-bold.ttf sourceFonts/ && \
-    curl --fail -L https://github.com/googlefonts/noto-emoji/blob/$NOTO_EMOJI_VERSION/fonts/NotoEmoji-Regular.ttf?raw=true -o sourceFonts/NotoEmoji-Regular.ttf && \
-    echo "${NOTO_EMOJI_FILE_HASH}  sourceFonts/NotoEmoji-Regular.ttf" | shasum -c && \
+    curl --fail -L https://github.com/onihusube/Cica/raw/refs/heads/main/NotoEmoji-Regular.ttf -o sourceFonts/NotoEmoji-Regular.ttf && \
     curl --fail -L http://sourceforge.net/projects/dejavu/files/dejavu/$DEJAVU_VERSION/dejavu-fonts-ttf-$DEJAVU_VERSION.zip -o /tmp/dejavu.zip && \
     echo "${DEJAVU_ARCHIVE_HASH}  /tmp/dejavu.zip" | shasum -c && \
     unar /tmp/dejavu.zip -o /tmp && \
